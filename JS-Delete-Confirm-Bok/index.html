@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delete</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Confirm delete</h1>
+
+    <fieldset>
+        <legend>Secret Massage</legend>
+        <p id="secretMGS">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, voluptate explicabo
+            quibusdam tempore
+            similique at iure reprehenderit nisi reiciendis nemo quas tenetur, autem error repellendus nam animi
+            voluptatum alias quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nesciunt
+            asperiores iure, itaque iusto cumque odit ratione dicta. Libero exercitationem accusamus culpa perspiciatis
+            sed cumque, consequatur quod sequi totam consequuntur! Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Assumenda quam adipisci labore odit quisquam commodi, corporis ipsa dolore, natus deleniti asperiores
+            aliquam nostrum autem, magni accusamus vel velit hic? Commodi.</p>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Please Type "confirm" and delete secret mgs</legend>
+        <input id="confirmBox" type="text" placeholder="please type.."
+            style="padding: 15px; border: none; font-size: 1rem;">
+    </fieldset>
+    <div style="text-align: center; margin-top: 20px;">
+        <button id="deleteBtn" style="padding: 15px 30px; cursor: pointer; font-weight: bold; font-size: 1.2rem;"
+            disabled>Delete</button>
+    </div>
+    <script>
+
+        const secretMGS = document.getElementById("secretMGS");
+        const confirmBox = document.getElementById("confirmBox");
+        const deleteBtn = document.getElementById("deleteBtn");
+
+
+        confirmBox.addEventListener("keyup", (event) => {
+            if (event.target.value === "confirm") {
+                deleteBtn.removeAttribute("disabled");
+            } else {
+                deleteBtn.setAttribute("disabled", true);
+            }
+        })
+
+
+        deleteBtn.addEventListener("click", () => {
+            secretMGS.style.display = "none";
+            confirmBox.value = '';
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>
