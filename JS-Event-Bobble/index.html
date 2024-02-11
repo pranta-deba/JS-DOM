@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 style="text-align: center; margin: 10px;">Event Bobbles</h1>
+
+    <div style="display: flex;">
+
+        <div id="dada" style="padding: 50px; border: 2px solid red; cursor: pointer;">dada
+
+            <div id="bap" style="padding: 50px; border: 2px solid green; cursor: pointer;">bap
+
+                <div id="cele1" style="padding: 50px; border: 2px solid black; margin: 3px; cursor: pointer;">cele 1</div>
+                <div id="cele2" style="padding: 50px; border: 2px solid tomato; margin: 3px; cursor: pointer;">cele 2</div>
+                <div id="cele3" style="padding: 50px; border: 2px solid yellow; margin: 3px; cursor: pointer;">cele 3</div>
+                
+            </div>
+
+        </div>
+
+        <div style="margin-left: 30px;">
+            <h1 id="dadarMgs"></h1>
+            <h1 id="baperMgs"></h1>
+            <h1 id="cele1Mgs"></h1>
+            <h1 id="cele2Mgs"></h1>
+            <h1 id="cele3Mgs"></h1>
+        </div>
+
+    </div>
+
+    <script>
+
+        const dadarMgs = document.getElementById('dadarMgs');
+        const baperMgs = document.getElementById('baperMgs');
+        const cele1Mgs = document.getElementById('cele1Mgs');
+        
+
+        const dada = document.getElementById('dada');
+        const bap = document.getElementById('bap');
+        const cele1 = document.getElementById('cele1');
+
+
+        cele1.addEventListener("click", (event)=>{
+            cele1Mgs.innerText = "Cele 1 er upor click diyecho."
+            event.stopPropagation();
+        })
+        bap.addEventListener("click", ()=>{
+            baperMgs.innerText = "baper er upor click diyecho."
+        })
+        dada.addEventListener("click", ()=>{
+            dadarMgs.innerText = "dadar er upor click diyecho."
+        })
+
+    </script>
+</body>
+
+</html>
