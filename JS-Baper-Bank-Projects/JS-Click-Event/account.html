@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Account</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap"
+        rel="stylesheet">
+</head>
+
+<body style="font-family: 'Poppins', sans-serif;">
+
+    <main class="flex items-center justify-center">
+        <div class="p-9 bg-yellow-300 w-full h-screen">
+            <h1 class="text-5xl mb-9 text-center">Lets get some <span class="font-bold">moooney</span> !!!</h1>
+            <div class="bg-blue-200 md:min-h-72 py-16 rounded-2xl shadow-md space-y-6">
+                <div class="flex justify-center items-center gap-7">
+                    <div class="bg-green-400 min-w-60 min-h-28 p-9 text-white rounded-md">
+                        <p class="text-2xl font-bold">Deposit</p>
+                        <p class="text-4xl font-normal">$<span id="dipositBalance">00</span></p>
+                    </div>
+                    <div class="bg-pink-500 min-w-60 min-h-28 p-9 text-white rounded-md">
+                        <p class="text-2xl font-bold">Withdraw</p>
+                        <p class="text-4xl font-normal">$<span id="withdrawBalance">00</span></p>
+                    </div>
+                    <div class="bg-red-500 min-w-60 min-h-28 p-9 text-white rounded-md">
+                        <p class="text-2xl font-bold">Balance</p>
+                        <p class="text-4xl font-normal">$<span id="totalBalance">1240</span></p>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center gap-7">
+                    <div class="bg-fuchsia-500 p-5 space-y-4 rounded-2xl">
+                        <p class="text-white font-normal">Please Diposit</p>
+                        <div class="flex flex-col">
+                            <div class="join">
+                                <input id="dipositAddInput" type="text" class="input input-bordered join-item" placeholder="$ amount you want to deposit"/>
+                                <button id="dipositAddBtn" class="btn join-item rounded-r-full bg-slate-400">Diposit</button>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="bg-orange-300 p-5 space-y-4 rounded-2xl">
+                        <p class="text-white font-normal">Please Withdraw</p>
+                        <div class="flex flex-col">
+                            <div class="join">
+                                <input id="withdrawAddInput" type="text" class="input input-bordered join-item" placeholder="$ amount you want to withdraw"/>
+                                <button id="withdrawAddBtn" class="btn join-item rounded-r-full bg-slate-400">Withdraw</button>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="diposit.js"></script>
+</body>
+
+</html>
